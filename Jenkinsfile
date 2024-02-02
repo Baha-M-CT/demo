@@ -27,7 +27,7 @@ pipeline {
                 script {
                     // Шаг деплоя в указанную папку на компьютере
 					echo 'Deploying to /path...'
-                    sh 'cp -r target/* /path'
+                    sh 'cp -r target/buildpath'
                 }
             }
         }
