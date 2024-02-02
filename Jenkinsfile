@@ -6,6 +6,7 @@ pipeline {
             steps {
                 script {
                     // Шаг клонирования репозитория
+					echo 'Clone repo...'
                     checkout scm
                 }
             }
@@ -15,6 +16,7 @@ pipeline {
             steps {
                 script {
                     // Шаг сборки проекта
+					echo 'Building the project...'
                     sh 'mvn clean install' // Пример для проекта на Maven
                 }
             }
@@ -24,6 +26,7 @@ pipeline {
             steps {
                 script {
                     // Шаг деплоя в указанную папку на компьютере
+					echo 'Deploying to /path...'
                     sh 'cp -r target/* /path'
                 }
             }
